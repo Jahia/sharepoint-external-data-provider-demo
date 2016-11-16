@@ -1,0 +1,34 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+<shpnt = 'http://www.jahia.org/'>
+
+[jnt:sharepointFactoryForm] > jnt:content, jmix:siteComponent, jmix:studioOnly, mix:title
+
+[jnt:shAsset] > jnt:content, jmix:structuredContent
+ - id (string)
+ - author (string)
+ - fileType (string)
+ - fileName (string)
+ - title (string)
+ - comments (string)
+ - fileUrl (string)
+
+[jnt:sharepointMountPointFactoryPage] > jnt:content, jmix:mountPointFactory, jmix:siteComponent, jmix:studioOnly, mix:title
+
+[jnt:sharepointView] > jnt:content, shpnt:sharepointCategory
+
+[jnt:sharepointMountPoint] > jnt:mountPoint
+ - user (string) mandatory indexed=no nofulltext
+ - password (string) mandatory indexed=no nofulltext
+ - protocol (string) mandatory indexed=no noqueryorder nofulltext
+ - port (string) mandatory indexed=no noqueryorder nofulltext
+ - host (string) mandatory indexed=no noqueryorder nofulltext
+ - libraryName (string) mandatory indexed=no noqueryorder nofulltext
+ - wsdlUrl (string) mandatory indexed=no noqueryorder nofulltext
+
+[shpnt:sharepointCategory] > jmix:droppableContent mixin
+
+[shpnt:imageGallery] > shpnt:sharepointCategory
+ itemtype = content
+

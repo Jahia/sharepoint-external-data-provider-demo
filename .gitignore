@@ -1,0 +1,21 @@
+######################
+# Project files      #
+######################
+/.settings
+/target
+/.classpath
+/.project
+.idea/
+*.iml
+atlassian-ide-plugin.xml
+*.ipr
+.svn
+
+######################
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+*.DS_Store

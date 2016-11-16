@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <sharepoint-edp j:dependencies="default external-provider"
+                      j:modulePriority="0"
+                      j:moduleType="module"
+                      j:title="Sharepoint-EDP"
+                      jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                      jcr:primaryType="jnt:module">
+                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                  jcr:primaryType="jnt:moduleVersionFolder"
+                  j:staticMountPointProviderKey="module-sharepoint-edp-1.0-SNAPSHOT">
+                    <src jcr:primaryType="jnt:folder">
+                        <main jcr:primaryType="jnt:folder">
+                            <resources jcr:primaryType="jnt:folder">
+                                <jnt_sharepointAsset jcr:primaryType="jnt:nodeTypeFolder">
+                                    <html jcr:primaryType="jnt:templateTypeFolder">
+                                        <sharepointAsset.jsp jcr:primaryType="jnt:viewFile"/>
+                                    </html>
+                                </jnt_sharepointAsset>
+                            </resources>
+                        </main>
+                    </src>
+                </sources>
+                
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder"/>
+                <contents jcr:primaryType="jnt:contentFolder">
+                    <sharepointfactorypage j:mountPointType="jnt:sharepointMountPoint"
+                                   j:templateName="sharepoint-factory"
+                                   jcr:primaryType="jnt:sharepointMountPointFactoryPage"/>
+                </contents>
+                <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
+                    <files jcr:primaryType="jnt:folder"/>
+                    <contents jcr:primaryType="jnt:contentFolder"/>
+                    <server-settings-base j:hiddenTemplate="false"
+                                  j:view="serverSettings"
+                                  jcr:primaryType="jnt:template">
+                        <sharepoint-factory j:applyOn="jnt:sharepointMountPointFactoryPage"
+                                   j:defaultTemplate="false"
+                                   j:hiddenTemplate="false"
+                                   jcr:primaryType="jnt:contentTemplate">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="Sharepoint factory"/>
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <sharepoint-provider jcr:primaryType="jnt:sharepointFactoryForm">
+                                    <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="Sharepoint Provider"/>
+                                </sharepoint-provider>
+                            </pagecontent>
+                        </sharepoint-factory>
+                    </server-settings-base>
+                </templates>
+                
+            </sharepoint-edp>
+    </modules>
+</content>
